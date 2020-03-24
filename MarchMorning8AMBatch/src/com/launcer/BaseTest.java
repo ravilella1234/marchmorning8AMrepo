@@ -3,7 +3,9 @@ package com.launcer;
 import java.io.FileInputStream;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -65,6 +67,8 @@ public class BaseTest
 			
 			driver=new FirefoxDriver(option);
 		}
+		
+		driver.manage().window().maximize();
 	}
 	
 	
@@ -72,6 +76,48 @@ public class BaseTest
 	{
 		//driver.get(subprop.getProperty(url));
 		driver.navigate().to(subprop.getProperty(url));
+	}
+	
+	
+	public static void clickElement(String locatorKey) 
+	{
+		//driver.findElement(By.xpath(locatorKey)).click();
+		getElement(locatorKey).click();
+	}
+
+	public static void type(String locatorKey, String value)
+	{
+		//driver.findElement(By.name(locatorKey)).sendKeys(value);
+		getElement(locatorKey).sendKeys(mainprop.getProperty(value));
+	}
+
+	public static void selectOption(String locatorKey, String item) 
+	{
+		//driver.findElement(By.id(locatorKey)).sendKeys(item);
+		getElement(locatorKey).sendKeys(mainprop.getProperty(item));
+	}
+
+
+	private static WebElement getElement(String locatorKey) 
+	{
+		WebElement element=null;
+		
+		if(locatorKey.endsWith("_id")) {
+			element=driver.findElement(By.id(mainprop.getProperty(locatorKey)));
+		}else if(locatorKey.endsWith("_name")) {
+			element=driver.findElement(By.name(mainprop.getProperty(locatorKey)));
+		}else if(locatorKey.endsWith("_classname")) {
+			element=driver.findElement(By.className(mainprop.getProperty(locatorKey)));
+		}else if(locatorKey.endsWith("_xpath")) {
+			element=driver.findElement(By.xpath(mainprop.getProperty(locatorKey)));
+		}else if(locatorKey.endsWith("_css")) {
+			element=driver.findElement(By.cssSelector(mainprop.getProperty(locatorKey)));
+		}else if(locatorKey.endsWith("_linktext")) {
+			element=driver.findElement(By.linkText(mainprop.getProperty(locatorKey)));
+		}else if(locatorKey.endsWith("_partiallinktext")) {
+			element=driver.findElement(By.partialLinkText(mainprop.getProperty(locatorKey)));
+		}
+		return element;
 	}
 
 }

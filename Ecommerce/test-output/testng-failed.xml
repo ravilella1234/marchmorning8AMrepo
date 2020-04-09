@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [RegressionSuite]" parallel="tests">
+  <test thread-count="5" name="ChromeTest(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.project.Ecommerce.RadioButton1">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="radioTest"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- com.project.Ecommerce.RadioButton1 -->
+      <class name="com.project.Ecommerce.LinksTesting1">
+        <methods>
+          <include name="linktesting1"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.project.Ecommerce.LinksTesting1 -->
+      <class name="com.project.Ecommerce.TC_002">
+        <methods>
+          <include name="amazon"/>
+          <include name="endProcess"/>
+          <include name="startProcess"/>
+        </methods>
+      </class> <!-- com.project.Ecommerce.TC_002 -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+  <test thread-count="5" name="FirefoxTest(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.project.Ecommerce.CheckBox1">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="checkboxTest"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.project.Ecommerce.CheckBox1 -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+</suite> <!-- Failed suite [RegressionSuite] -->

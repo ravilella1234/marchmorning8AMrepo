@@ -15,7 +15,7 @@ public class RadioButton1 extends BaseTest
 {
 
 
-	@BeforeMethod
+	@BeforeMethod(groups = {"regression","smoke"})
 	@Parameters("browser")
 	  public void beforeMethod(String bType) throws Exception 
 	  {
@@ -32,7 +32,7 @@ public class RadioButton1 extends BaseTest
 	  }
 	
 	
-	@Test
+	@Test(groups = {"regression","smoke"})
 	public void radioTest() throws InterruptedException
 	{
 		Thread.sleep(3000);
@@ -45,7 +45,7 @@ public class RadioButton1 extends BaseTest
 	}
  
 
-  @AfterMethod
+  @AfterMethod(groups = {"regression","smoke"})
   public void afterMethod() 
   {
 	  driver.quit();

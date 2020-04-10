@@ -13,7 +13,7 @@ import com.relevantcodes.extentreports.LogStatus;
 public class LinksTesting1 extends BaseTest
 {
 
-	@BeforeMethod
+	@BeforeMethod(groups = {"regression"})
 	@Parameters("browser")
 	public void setup(String bType) throws Exception
 	{
@@ -31,7 +31,7 @@ public class LinksTesting1 extends BaseTest
 	
 	
 	
-	@Test
+	@Test(groups = {"regression"})
 	public void linktesting1()
 	
 	 {
@@ -45,7 +45,7 @@ public class LinksTesting1 extends BaseTest
 		
 	 }
 	
-	@AfterMethod
+	@AfterMethod(groups = {"regression"})
 	public void tearDown()
 	{
 		driver.quit();

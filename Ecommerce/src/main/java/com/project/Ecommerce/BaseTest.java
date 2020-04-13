@@ -39,7 +39,7 @@ public class BaseTest
 	static
 	{
 		Date dt=new Date();
-		filePath = dt.toString().replace(' ', '_').replace(':', '_')+".html";
+		filePath = dt.toString().replace(' ', '_').replace(':', '_');
 	}
 	
 	public static void init() throws Exception 

@@ -3,14 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.project.Ecommerce.TestDependency">
+      <class name="dataDriven.NewTest">
         <methods>
-          <include name="orange"/>
-          <include name="white"/>
-          <include name="green"/>
-          <include name="blue"/>
+          <include name="f"/>
         </methods>
-      </class> <!-- com.project.Ecommerce.TestDependency -->
+      </class> <!-- dataDriven.NewTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

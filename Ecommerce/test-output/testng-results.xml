@@ -2,23 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1848" started-at="2020-04-22T03:32:28Z" finished-at="2020-04-22T03:32:30Z">
+  <suite name="Default suite" duration-ms="23551" started-at="2020-04-23T03:28:00Z" finished-at="2020-04-23T03:28:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1848" started-at="2020-04-22T03:32:28Z" finished-at="2020-04-22T03:32:30Z">
-      <class name="dataDriven.TC_003">
-        <test-method status="PASS" signature="f(java.util.Hashtable)[pri:0, instance:dataDriven.TC_003@4b168fa9]" name="f" duration-ms="21" started-at="2020-04-22T03:32:30Z" data-provider="dp" finished-at="2020-04-22T03:32:30Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Col4=Dummy4, Col3=Dummy3, Col2=Dummy2, Col1=Dummy1, Runmode=Y}]]>
-              </value>
-            </param>
-          </params>
+    <test name="Default test" duration-ms="23551" started-at="2020-04-23T03:28:00Z" finished-at="2020-04-23T03:28:23Z">
+      <class name="pageobjectmodel.LoginTest">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:pageobjectmodel.LoginTest@436a4e4b]" name="beforeMethod" is-config="true" duration-ms="17199" started-at="2020-04-23T03:28:00Z" finished-at="2020-04-23T03:28:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="f()[pri:0, instance:pageobjectmodel.LoginTest@436a4e4b]" name="f" duration-ms="6287" started-at="2020-04-23T03:28:17Z" finished-at="2020-04-23T03:28:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-      </class> <!-- dataDriven.TC_003 -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:pageobjectmodel.LoginTest@436a4e4b]" name="afterMethod" is-config="true" duration-ms="0" started-at="2020-04-23T03:28:23Z" finished-at="2020-04-23T03:28:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- pageobjectmodel.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,27 +1,36 @@
 package pageobjectmodel;
 
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeMethod;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
-public class LoginTest 
+import com.project.Ecommerce.BaseTest;
+
+public class LoginTest extends BaseTest
 {
 	
-	WebDriver driver;
-	
+		
   @BeforeMethod
-  public void beforeMethod() 
+  public void beforeMethod() throws Exception 
   {
+	  init();
 	 driver=new ChromeDriver();
 	 driver.manage().window().maximize();
 	 driver.get("http://automationpractice.com/index.php");
+	// driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
   
+  
   @Test
+  public void regsitration() throws Exception
+  {
+	  CustomerRegistrationPage cr= new CustomerRegistrationPage(driver);
+	  cr.customerRegistration();
+  }
+  
+  @Test(enabled = false)
   public void f() throws Exception 
   {
 	  

@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.Date;
 import java.util.Properties;
+import java.util.Random;
 
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
@@ -19,6 +20,8 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.ProfilesIni;
 import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -172,7 +175,7 @@ public class BaseTest
 	}
 
 
-	private static void takesScreenShot() throws Exception
+	public static void takesScreenShot() throws Exception
 	{
 		Date dt=new Date();
 		System.out.println(dt);
@@ -182,6 +185,19 @@ public class BaseTest
 		
 		test.log(LogStatus.INFO, "Screenshot --->" +test.addScreenCapture(projectpath+"\\failurescreenshots\\"+dateFormat));
 		
+	}
+	
+	public void waitforElement(int timeInSeconds, WebElement element)
+	{
+		WebDriverWait wait= new WebDriverWait(driver, timeInSeconds);
+		wait.until(ExpectedConditions.visibilityOf(element));
+	}
+	
+	public int randomNum() 
+	{
+		Random r = new Random();
+		int rnum = r.nextInt(99999);
+		return rnum;
 	}
 
 }

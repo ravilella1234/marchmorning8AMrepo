@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="26100" started-at="2020-04-24T03:43:54Z" finished-at="2020-04-24T03:44:20Z">
+  <suite name="Default suite" duration-ms="30877" started-at="2020-05-06T03:28:28Z" finished-at="2020-05-06T03:28:59Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="26100" started-at="2020-04-24T03:43:54Z" finished-at="2020-04-24T03:44:20Z">
-      <class name="pageobjectmodel.LoginTest">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:pageobjectmodel.LoginTest@6156496]" name="beforeMethod" is-config="true" duration-ms="17865" started-at="2020-04-24T03:43:54Z" finished-at="2020-04-24T03:44:12Z">
+    <test name="Default test" duration-ms="30877" started-at="2020-05-06T03:28:28Z" finished-at="2020-05-06T03:28:59Z">
+      <class name="com.Alerts.FileUpload">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.Alerts.FileUpload@436a4e4b]" name="beforeMethod" is-config="true" duration-ms="27347" started-at="2020-05-06T03:28:28Z" finished-at="2020-05-06T03:28:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="regsitration()[pri:0, instance:pageobjectmodel.LoginTest@6156496]" name="regsitration" duration-ms="8165" started-at="2020-04-24T03:44:12Z" finished-at="2020-04-24T03:44:20Z">
+        <test-method status="PASS" signature="fileupload()[pri:0, instance:com.Alerts.FileUpload@436a4e4b]" name="fileupload" duration-ms="3445" started-at="2020-05-06T03:28:56Z" finished-at="2020-05-06T03:28:59Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- regsitration -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:pageobjectmodel.LoginTest@6156496]" name="afterMethod" is-config="true" duration-ms="0" started-at="2020-04-24T03:44:20Z" finished-at="2020-04-24T03:44:20Z">
+        </test-method> <!-- fileupload -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.Alerts.FileUpload@436a4e4b]" name="afterMethod" is-config="true" duration-ms="1" started-at="2020-05-06T03:28:59Z" finished-at="2020-05-06T03:28:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- pageobjectmodel.LoginTest -->
+      </class> <!-- com.Alerts.FileUpload -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,4 +1,4 @@
-package actionsAndJavaScriptExecutors;
+package com.actionsjavascriptexecutors;
 
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -17,14 +17,14 @@ public class ScriptExceutor
 		driver.get("https://www.facebook.com");
 				
 		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("document.getElementById('email').value='ravilella'");	
+		//js.executeScript("document.getElementById('email').value='ravilella'");	
 		
 
 		// String v = js.executeScript("return document.title").toString();
 		//System.out.println(v);
 		
 		
-		//js.executeScript("window.scrollBy(0,100)");
+		js.executeScript("window.scrollBy(0,100)");
 		
 		//js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 		

@@ -1,4 +1,4 @@
-package webtables;
+package com.webTables;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +15,7 @@ public class RedBusDataPicker {
 
 	public static void main(String[] args) throws Exception
 	{
-		String myDate="5-May 2020";
+		String myDate="25-May 2020";
 		String[] strarr = myDate.split("-");
 		String startDate=strarr[0];
 		String startMonth=strarr[1];

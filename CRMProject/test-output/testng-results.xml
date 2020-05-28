@@ -1,21 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="70" started-at="2020-05-26T03:34:04Z" finished-at="2020-05-26T03:34:04Z">
+  <suite name="Default suite" duration-ms="1515" started-at="2020-05-28T03:20:49Z" finished-at="2020-05-28T03:20:50Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="70" started-at="2020-05-26T03:34:04Z" finished-at="2020-05-26T03:34:04Z">
-      <class name="com.project.SuiteA.TC_001">
-        <test-method status="PASS" signature="startProcess()[pri:0, instance:com.project.SuiteA.TC_001@14a2f921]" name="startProcess" is-config="true" duration-ms="23" started-at="2020-05-26T09:04:04Z" finished-at="2020-05-26T09:04:04Z">
+    <test name="Default test" duration-ms="1515" started-at="2020-05-28T03:20:49Z" finished-at="2020-05-28T03:20:50Z">
+      <class name="com.project.SuiteA.LoginTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.project.SuiteA.LoginTest@2aece37d]" name="init" is-config="true" duration-ms="1409" started-at="2020-05-28T08:50:49Z" finished-at="2020-05-28T08:50:50Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startProcess -->
-        <test-method status="PASS" signature="test()[pri:0, instance:com.project.SuiteA.TC_001@14a2f921]" name="test" duration-ms="10" started-at="2020-05-26T09:04:04Z" finished-at="2020-05-26T09:04:04Z">
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="loginTest(java.util.Hashtable)[pri:0, instance:com.project.SuiteA.LoginTest@2aece37d]" name="loginTest" duration-ms="19" started-at="2020-05-28T08:50:50Z" data-provider="getData" finished-at="2020-05-28T08:50:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ExpectedResult=LoginSuccess, Password=zoho2015, Rumode=Y, UserName=ravilella.2015@gmail.com, Browser=chrome}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test -->
-      </class> <!-- com.project.SuiteA.TC_001 -->
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="loginTest(java.util.Hashtable)[pri:0, instance:com.project.SuiteA.LoginTest@2aece37d]" name="loginTest" duration-ms="4" started-at="2020-05-28T08:50:50Z" data-provider="getData" finished-at="2020-05-28T08:50:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ExpectedResult=LoginSuccess, Password=P2, Rumode=N, UserName=U2, Browser=firefox}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+      </class> <!-- com.project.SuiteA.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

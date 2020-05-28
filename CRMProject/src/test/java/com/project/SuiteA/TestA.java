@@ -2,8 +2,13 @@ package com.project.SuiteA;
 
 import org.testng.annotations.Test;
 
-public class TestA {
+import com.project.BaseClass.BaseTest;
+
+public class TestA extends BaseTest
+{
   @Test
-  public void f() {
+  public void z() 
+  {
+	  System.out.println("iam z test.....");
   }
 }

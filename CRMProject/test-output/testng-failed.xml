@@ -5,7 +5,7 @@
     <classes>
       <class name="com.project.SuiteA.LoginTest">
         <methods>
-          <include name="loginTest"/>
+          <include name="loginTest" invocation-numbers="1"/>
           <include name="init"/>
         </methods>
       </class> <!-- com.project.SuiteA.LoginTest -->

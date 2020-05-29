@@ -5,6 +5,7 @@ import java.util.Properties;
 
 import org.testng.annotations.BeforeTest;
 
+import com.project.DriverProgrames.DriverScript;
 import com.project.Utilities.ExcelAPI;
 
 public class BaseTest 
@@ -14,9 +15,11 @@ public class BaseTest
 	public static Properties baseProperties;
 	public static Properties childProperties; 
 	public static ExcelAPI xls;
+	public String testName=null;
+	public DriverScript ds;
 	
 	@BeforeTest
-	public static void init() throws Exception
+	public void init() throws Exception
 	{
 		System.out.println("iam before Test.....");
 		
@@ -32,9 +35,18 @@ public class BaseTest
 		String url = childProperties.getProperty("zohourl");
 		System.out.println(url);
 		
+		//init the TestName
+		testName = this.getClass().getSimpleName();
+		System.out.println(testName);
+		
+		
+		//How do i come to know which suite Excel file to load
+		String[] pack = this.getClass().getPackage().getName().split("\\.");
+		String suiteName = pack[pack.length-1];
+		System.out.println(suiteName);
+		
 		//init the xls file
-		//How do i come to know which suitex Excel file to load
-		xls = new ExcelAPI(childProperties.getProperty("SuiteA_xls"));
+		xls = new ExcelAPI(childProperties.getProperty(suiteName+"_xls"));
 	}
 
 }

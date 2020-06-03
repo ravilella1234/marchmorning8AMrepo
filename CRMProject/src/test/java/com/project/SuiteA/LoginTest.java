@@ -7,7 +7,6 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.project.BaseClass.BaseTest;
-import com.project.DriverProgrames.DriverScript;
 import com.project.Utilities.DataUtils;
 
 public class LoginTest extends BaseTest
@@ -21,7 +20,7 @@ public class LoginTest extends BaseTest
 	  if(data.get("Rumode").equals("N"))
 		  throw new SkipException("Runmode is set to NO...");
 	  
-	  ds = new DriverScript();
+	  //ds = new DriverScript();
 	  ds.executeKeywords(xls, testName, data);
   }
   

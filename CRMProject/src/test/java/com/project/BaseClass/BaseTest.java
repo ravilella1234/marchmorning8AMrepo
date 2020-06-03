@@ -12,8 +12,9 @@ public class BaseTest
 {
 	public static String projectPath=System.getProperty("user.dir");
 	public static FileInputStream fis;
-	public static Properties baseProperties;
-	public static Properties childProperties; 
+	public  Properties baseProperties;
+	public  Properties childProperties; 
+	public  Properties orProp;
 	public static ExcelAPI xls;
 	public String testName=null;
 	public DriverScript ds;
@@ -35,6 +36,10 @@ public class BaseTest
 		String url = childProperties.getProperty("zohourl");
 		System.out.println(url);
 		
+		fis = new FileInputStream(projectPath + "//src//test//resources//or.properties") ;
+		orProp = new Properties();
+		orProp.load(fis);
+		
 		//init the TestName
 		testName = this.getClass().getSimpleName();
 		System.out.println(testName);
@@ -47,6 +52,10 @@ public class BaseTest
 		
 		//init the xls file
 		xls = new ExcelAPI(childProperties.getProperty(suiteName+"_xls"));
+		
+		//init DriverScript Object
+		ds= new DriverScript();
+		ds.setOrProp(orProp);
 	}
 
 }

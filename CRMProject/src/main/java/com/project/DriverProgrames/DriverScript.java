@@ -1,5 +1,6 @@
 package com.project.DriverProgrames;
 
+import java.lang.reflect.Method;
 import java.util.Hashtable;
 import java.util.Properties;
 
@@ -32,7 +33,7 @@ public class DriverScript
 	
 
 
-	public void executeKeywords(ExcelAPI xls, String testName, Hashtable<String, String> testData)
+	public void executeKeywords(ExcelAPI xls, String testName, Hashtable<String, String> testData) throws Exception, Exception
 	{
 		System.out.println("iam driverScript classs");
 		int rows = xls.getRowCount("Keyword");
@@ -59,16 +60,27 @@ public class DriverScript
 				app.setData(testData);
 				app.setChildProperties(childProperties);
 				
-				if(kWord.equals("openBrowser"))
-					app.openBrowser();
-				else if(kWord.equals("navigateUrl"))
-					app.navigateUrl();
-				else if(kWord.equals("click"))
-					app.click();
-				else if(kWord.equals("type"))
-					app.type();
-				else if(kWord.equals("validateLogin"))
-					app.validateLogin();
+				
+				/*
+				 * if(kWord.equals("openBrowser")) app.openBrowser(); else
+				 * if(kWord.equals("navigateUrl")) app.navigateUrl(); else
+				 * if(kWord.equals("click")) app.click(); else if(kWord.equals("type"))
+				 * app.type(); else if(kWord.equals("validateLogin")) app.validateLogin(); else
+				 * if(kWord.equals("verifyTitle")) app.verifyTitle();
+				 */
+				
+				//Replection API
+				Method method;
+				try 
+				{
+					method = app.getClass().getMethod(kWord);
+					method.invoke(app);
+				} 
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+				
+				
 				
 				
 			}

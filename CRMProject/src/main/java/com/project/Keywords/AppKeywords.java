@@ -7,4 +7,10 @@ public class AppKeywords extends GenericKeywords
 		System.out.println("Valdating Login......");
 	}
 
+	public void verifyTitle() 
+	{
+		System.out.println("Verified title...");
+		
+	}
+
 }

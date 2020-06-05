@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -16,7 +17,7 @@ public class GenericKeywords
 	public String objectKey;
 	public String dataKey;
 	public Hashtable<String, String> data;
-	public WebDriver driver;
+	public static WebDriver driver;
 	
 	
 
@@ -69,16 +70,36 @@ public class GenericKeywords
 		driver.get(objectKey);
 	}
 	
-	public void click()
+	public void click() throws Exception
 	{
 		System.out.println("Clicking the element....."+orProp.getProperty(objectKey));
-		driver.findElement(By.xpath(orProp.getProperty(objectKey))).click();
+		//driver.findElement(By.xpath(orProp.getProperty(objectKey))).click();
+		getElement(objectKey).click();
 	}
 	
 	public void type()
 	{
 		System.out.println("Typing the Text......." + orProp.getProperty(objectKey) + "-----" + data.get(dataKey));
-		driver.findElement(By.xpath(orProp.getProperty(objectKey))).sendKeys(data.get(dataKey));
+		//driver.findElement(By.xpath(orProp.getProperty(objectKey))).sendKeys(data.get(dataKey));
+		getElement(objectKey).sendKeys(data.get(dataKey));
+	}
+	
+	public  WebElement getElement(String objectKey)
+	{
+		WebElement element=null;
+		
+		if(objectKey.endsWith("_id")) {
+			element = driver.findElement(By.id(orProp.getProperty(objectKey)));
+		}if(objectKey.endsWith("_name")) {
+			element = driver.findElement(By.name(orProp.getProperty(objectKey)));
+		}if(objectKey.endsWith("_xpath")) {
+			element = driver.findElement(By.xpath(orProp.getProperty(objectKey)));
+		}if(objectKey.endsWith("_css")) {
+			element = driver.findElement(By.cssSelector(orProp.getProperty(objectKey)));
+		}
+		
+		return element;
+		
 	}
 
 }

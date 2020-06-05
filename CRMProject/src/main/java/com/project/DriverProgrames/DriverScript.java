@@ -5,6 +5,7 @@ import java.util.Hashtable;
 import java.util.Properties;
 
 import com.project.Keywords.AppKeywords;
+import com.project.Utilities.Constants;
 import com.project.Utilities.ExcelAPI;
 
 public class DriverScript 
@@ -36,21 +37,19 @@ public class DriverScript
 	public void executeKeywords(ExcelAPI xls, String testName, Hashtable<String, String> testData) throws Exception, Exception
 	{
 		System.out.println("iam driverScript classs");
-		int rows = xls.getRowCount("Keyword");
+		int rows = xls.getRowCount(Constants.KEYWORDS_SHEET);
 		System.out.println("Rows : " + rows);
 		app = new AppKeywords();
 		app.setOrProp(orProp);
 		
-		
-	
 		for(int rNum=1;rNum<rows;rNum++)
 		{
-			String tcId = xls.getCellData("Keyword", "TCID", rNum);
+			String tcId = xls.getCellData(Constants.KEYWORDS_SHEET, Constants.TCID_COL, rNum);
 			if(tcId.equals(testName))
 			{
-				String kWord = xls.getCellData("Keyword", "Keywords", rNum);
-				String objectKey = xls.getCellData("Keyword", "Object", rNum);
-				String dataKey = xls.getCellData("Keyword", "Data", rNum);
+				String kWord = xls.getCellData(Constants.KEYWORDS_SHEET, Constants.KEYWORD_COL, rNum);
+				String objectKey = xls.getCellData(Constants.KEYWORDS_SHEET, Constants.OBJECT_COL, rNum);
+				String dataKey = xls.getCellData(Constants.KEYWORDS_SHEET, Constants.DATA_COL, rNum);
 				String data = testData.get(dataKey);
 				
 				//System.out.println(tcId + "----" + kWord + "----" + orProp.getProperty(objectKey) + "----" + data);

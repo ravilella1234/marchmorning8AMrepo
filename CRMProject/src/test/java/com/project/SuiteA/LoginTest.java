@@ -7,6 +7,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.project.BaseClass.BaseTest;
+import com.project.Utilities.Constants;
 import com.project.Utilities.DataUtils;
 
 public class LoginTest extends BaseTest
@@ -17,7 +18,7 @@ public class LoginTest extends BaseTest
   {
 	  System.out.println("iam logintest....");
 	  
-	  if(data.get("Rumode").equals("N"))
+	  if(data.get(Constants.RUNMODE_COL).equals(Constants.RUNMODE_YES))
 		  throw new SkipException("Runmode is set to NO...");
 	  
 	  //ds = new DriverScript();

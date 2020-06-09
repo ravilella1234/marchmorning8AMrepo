@@ -3,6 +3,8 @@ package com.project.BaseClass;
 import java.io.FileInputStream;
 import java.util.Properties;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 import com.project.DriverProgrames.DriverScript;
@@ -56,6 +58,22 @@ public class BaseTest
 		//init DriverScript Object
 		ds= new DriverScript();
 		ds.setOrProp(orProp);
+	
+	}
+	
+	
+	@BeforeMethod
+	public void initMethod()
+	{
+		System.out.println("iam Before Method.....");
+	}
+	
+	@AfterMethod
+	public void quit()
+	{
+		System.out.println("iam After Method.....");
+		if(ds!=null)
+			ds.quit();
 	}
 
 }

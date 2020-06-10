@@ -16,6 +16,7 @@ public class AppKeywords extends GenericKeywords
 		if(!expectedTitle.equals(actualTitle))
 		{
 			//Report the failure
+			reportFailure("Title did not match. Got the title as :- " + actualTitle);
 		}
 		
 	}

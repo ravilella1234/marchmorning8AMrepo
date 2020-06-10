@@ -64,7 +64,7 @@ public class GenericKeywords
 		
 		//Maximizing window & set implicit wait
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 	
 	public void navigateUrl()
@@ -122,8 +122,9 @@ public class GenericKeywords
 	
 	public void validateElementPresent()
 	{
-		if(!isElementPresent(objectKey));
+		if(!isElementPresent(objectKey))
 		//Report the failure Status
+		reportFailure("Element is not found :- " + objectKey);
 	}
 	
 	public boolean isElementPresent(String objectKey) 
@@ -153,8 +154,11 @@ public class GenericKeywords
 	public void reportFailure(String failureMsg)
 	{
 		//Fail the test in giving Fail Status
+		System.out.println(failureMsg);
 		
 		//Take the screenshots , and embedded the screenshots in physical location as well in extent reports
+		
+	
 	}
 	
 

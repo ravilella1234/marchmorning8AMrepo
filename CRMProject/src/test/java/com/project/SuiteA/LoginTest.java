@@ -18,7 +18,7 @@ public class LoginTest extends BaseTest
   {
 	  System.out.println("iam logintest....");
 	  
-	  if(data.get(Constants.RUNMODE_COL).equals(Constants.RUNMODE_YES))
+	  if(DataUtils.isSkip(testName, xls) || data.get(Constants.RUNMODE_COL).equals(Constants.RUNMODE_YES))
 		  throw new SkipException("Runmode is set to NO...");
 	  
 	  //ds = new DriverScript();

@@ -2,16 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="105578" started-at="2020-06-09T02:39:48Z" finished-at="2020-06-09T02:41:33Z">
+  <suite name="Default suite" duration-ms="50677" started-at="2020-06-10T03:32:35Z" finished-at="2020-06-10T03:33:26Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="105578" started-at="2020-06-09T02:39:48Z" finished-at="2020-06-09T02:41:33Z">
+    <test name="Default test" duration-ms="50677" started-at="2020-06-10T03:32:35Z" finished-at="2020-06-10T03:33:26Z">
       <class name="com.project.SuiteA.LoginTest">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.project.SuiteA.LoginTest@5762806e]" name="init" is-config="true" duration-ms="2695" started-at="2020-06-09T08:09:48Z" finished-at="2020-06-09T08:09:50Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.project.SuiteA.LoginTest@5af97850]" name="init" is-config="true" duration-ms="1327" started-at="2020-06-10T09:02:35Z" finished-at="2020-06-10T09:02:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="loginTest(java.util.Hashtable)[pri:0, instance:com.project.SuiteA.LoginTest@5762806e]" name="loginTest" duration-ms="29240" started-at="2020-06-09T08:09:51Z" data-provider="getData" finished-at="2020-06-09T08:10:20Z">
+        <test-method status="PASS" signature="initMethod()[pri:0, instance:com.project.SuiteA.LoginTest@5af97850]" name="initMethod" is-config="true" duration-ms="1" started-at="2020-06-10T09:02:36Z" finished-at="2020-06-10T09:02:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initMethod -->
+        <test-method status="PASS" signature="loginTest(java.util.Hashtable)[pri:0, instance:com.project.SuiteA.LoginTest@5af97850]" name="loginTest" duration-ms="18246" started-at="2020-06-10T09:02:36Z" data-provider="getData" finished-at="2020-06-10T09:02:55Z">
           <params>
             <param index="0">
               <value>
@@ -22,7 +26,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="loginTest(java.util.Hashtable)[pri:0, instance:com.project.SuiteA.LoginTest@5762806e]" name="loginTest" duration-ms="73458" started-at="2020-06-09T08:10:20Z" data-provider="getData" finished-at="2020-06-09T08:11:33Z">
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.project.SuiteA.LoginTest@5af97850]" name="quit" is-config="true" duration-ms="1968" started-at="2020-06-10T09:02:55Z" finished-at="2020-06-10T09:02:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method status="PASS" signature="initMethod()[pri:0, instance:com.project.SuiteA.LoginTest@5af97850]" name="initMethod" is-config="true" duration-ms="0" started-at="2020-06-10T09:02:57Z" finished-at="2020-06-10T09:02:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initMethod -->
+        <test-method status="PASS" signature="loginTest(java.util.Hashtable)[pri:0, instance:com.project.SuiteA.LoginTest@5af97850]" name="loginTest" duration-ms="19116" started-at="2020-06-10T09:02:57Z" data-provider="getData" finished-at="2020-06-10T09:03:16Z">
           <params>
             <param index="0">
               <value>
@@ -33,6 +45,10 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.project.SuiteA.LoginTest@5af97850]" name="quit" is-config="true" duration-ms="9943" started-at="2020-06-10T09:03:16Z" finished-at="2020-06-10T09:03:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
       </class> <!-- com.project.SuiteA.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

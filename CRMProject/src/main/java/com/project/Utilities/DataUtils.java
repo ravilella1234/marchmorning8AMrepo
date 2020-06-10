@@ -60,4 +60,26 @@ public class DataUtils
 		}
 		return data;	
 	}
+	
+	
+	//function to check the reunmode of test
+	// true  - N
+	//false  - Y
+	
+	public static boolean isSkip(String testName, ExcelAPI xls)
+	{
+		int rows = xls.getRowCount(Constants.TESTCASES_SHEET);
+		for(int rNum=1;rNum<rows;rNum++)
+		{
+			String tcid = xls.getCellData(Constants.TESTCASES_SHEET, Constants.TCID_COL, rNum);
+			if(tcid.equals(testName)) {
+				String runmode = xls.getCellData(Constants.TESTCASES_SHEET, Constants.RUNMODE_COL, rNum);
+				if(runmode.equals(Constants.RUNMODE_NO))
+					return true;
+				else
+					return false;	
+			}	
+		}
+		return true;
+	}
 }

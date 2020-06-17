@@ -57,7 +57,6 @@ public class DriverScript
 				String data = testData.get(dataKey);
 				
 				//System.out.println(tcId + "----" + kWord + "----" + orProp.getProperty(objectKey) + "----" + data);
-				
 				app.setObjectKey(objectKey);
 				app.setDataKey(dataKey);
 				app.setData(testData);

@@ -7,6 +7,8 @@
         <methods>
           <include name="loginTest" invocation-numbers="1"/>
           <include name="init"/>
+          <include name="initMethod"/>
+          <include name="quit"/>
         </methods>
       </class> <!-- com.project.SuiteA.LoginTest -->
     </classes>

@@ -7,8 +7,11 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.project.DriverProgrames.DriverScript;
 import com.project.Utilities.ExcelAPI;
+import com.project.reports.ExtentManager;
 
 public class BaseTest 
 {
@@ -20,6 +23,8 @@ public class BaseTest
 	public static ExcelAPI xls;
 	public String testName=null;
 	public DriverScript ds;
+	public static ExtentReports rep;
+	public static ExtentTest test;
 	
 	@BeforeTest
 	public void init() throws Exception
@@ -66,6 +71,9 @@ public class BaseTest
 	public void initMethod()
 	{
 		System.out.println("iam Before Method.....");
+		
+		rep = ExtentManager.getInstance(baseProperties.getProperty("reportPath"));
+		test = rep.createTest(testName);
 	}
 	
 	@AfterMethod
@@ -74,6 +82,9 @@ public class BaseTest
 		System.out.println("iam After Method.....");
 		if(ds!=null)
 			ds.quit();
+		
+		if(rep!=null)
+			rep.flush();
 	}
 
 }

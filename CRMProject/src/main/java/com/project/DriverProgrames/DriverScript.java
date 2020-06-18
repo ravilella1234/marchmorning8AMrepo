@@ -4,6 +4,8 @@ import java.lang.reflect.Method;
 import java.util.Hashtable;
 import java.util.Properties;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.project.Keywords.AppKeywords;
 import com.project.Utilities.Constants;
 import com.project.Utilities.ExcelAPI;
@@ -13,8 +15,13 @@ public class DriverScript
 	public  Properties childProperties; 
 	public  Properties orProp;
 	AppKeywords app;
+	public ExtentTest test;
 	
 	
+	public void setTest(ExtentTest test) {
+		this.test = test;
+	}
+
 	public Properties getChildProperties() {
 		return childProperties;
 	}
@@ -57,11 +64,12 @@ public class DriverScript
 				String data = testData.get(dataKey);
 				
 				//System.out.println(tcId + "----" + kWord + "----" + orProp.getProperty(objectKey) + "----" + data);
+				//test.log(Status.INFO, tcId + "----" + kWord + "----" + orProp.getProperty(objectKey) + "----" + data);
 				app.setObjectKey(objectKey);
 				app.setDataKey(dataKey);
 				app.setData(testData);
 				app.setChildProperties(childProperties);
-				
+				app.setTest(test);
 				
 				/*
 				 * if(kWord.equals("openBrowser")) app.openBrowser(); else

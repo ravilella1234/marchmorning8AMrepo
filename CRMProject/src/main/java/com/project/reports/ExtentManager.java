@@ -1,5 +1,7 @@
 package com.project.reports;
 
+import java.util.Date;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
@@ -13,16 +15,18 @@ public class ExtentManager
 	{
 		if(extent == null)
 		{
-			System.out.println(reportPath +"\\extent.html");
-			createInstance(reportPath +"\\extent.html");
+			Date dt = new Date();
+			String fileName = dt.toString().replace(':', '_').replace(' ', '_')+".html";
+			System.out.println(reportPath + fileName);
+			createInstance(reportPath + fileName);
 		}
 		
 		return extent;
 	}
 
-	public static ExtentReports createInstance(String fileName)
+	public static ExtentReports createInstance(String filePath)
 	{
-		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(fileName);
+		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(filePath);
 		htmlReporter.config().setTestViewChartLocation(ChartLocation.BOTTOM);
 		htmlReporter.config().setChartVisibilityOnOpen(true);
 		htmlReporter.config().setTheme(Theme.DARK);

@@ -24,7 +24,7 @@ public class BaseTest
 	public String testName=null;
 	public DriverScript ds;
 	public static ExtentReports rep;
-	public static ExtentTest test;
+	public  ExtentTest test;
 	
 	@BeforeTest
 	public void init() throws Exception
@@ -74,6 +74,7 @@ public class BaseTest
 		
 		rep = ExtentManager.getInstance(baseProperties.getProperty("reportPath"));
 		test = rep.createTest(testName);
+		ds.setTest(test);
 	}
 	
 	@AfterMethod

@@ -2,20 +2,20 @@
 <testng-results skipped="1" failed="0" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22112" started-at="2020-06-17T03:24:02Z" finished-at="2020-06-17T03:24:24Z">
+  <suite name="Default suite" duration-ms="194131" started-at="2020-06-18T03:16:16Z" finished-at="2020-06-18T03:19:30Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="22112" started-at="2020-06-17T03:24:02Z" finished-at="2020-06-17T03:24:24Z">
+    <test name="Default test" duration-ms="194131" started-at="2020-06-18T03:16:16Z" finished-at="2020-06-18T03:19:30Z">
       <class name="com.project.SuiteA.LoginTest">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.project.SuiteA.LoginTest@17c1bced]" name="init" is-config="true" duration-ms="1413" started-at="2020-06-17T08:54:02Z" finished-at="2020-06-17T08:54:03Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.project.SuiteA.LoginTest@17c1bced]" name="init" is-config="true" duration-ms="1350" started-at="2020-06-18T08:46:16Z" finished-at="2020-06-18T08:46:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="initMethod()[pri:0, instance:com.project.SuiteA.LoginTest@17c1bced]" name="initMethod" is-config="true" duration-ms="246" started-at="2020-06-17T08:54:03Z" finished-at="2020-06-17T08:54:03Z">
+        <test-method status="PASS" signature="initMethod()[pri:0, instance:com.project.SuiteA.LoginTest@17c1bced]" name="initMethod" is-config="true" duration-ms="222" started-at="2020-06-18T08:46:17Z" finished-at="2020-06-18T08:46:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initMethod -->
-        <test-method status="PASS" signature="loginTest(java.util.Hashtable)[pri:0, instance:com.project.SuiteA.LoginTest@17c1bced]" name="loginTest" duration-ms="18212" started-at="2020-06-17T08:54:03Z" data-provider="getData" finished-at="2020-06-17T08:54:22Z">
+        <test-method status="PASS" signature="loginTest(java.util.Hashtable)[pri:0, instance:com.project.SuiteA.LoginTest@17c1bced]" name="loginTest" duration-ms="190426" started-at="2020-06-18T08:46:17Z" data-provider="getData" finished-at="2020-06-18T08:49:28Z">
           <params>
             <param index="0">
               <value>
@@ -26,15 +26,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.project.SuiteA.LoginTest@17c1bced]" name="quit" is-config="true" duration-ms="1882" started-at="2020-06-17T08:54:22Z" finished-at="2020-06-17T08:54:24Z">
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.project.SuiteA.LoginTest@17c1bced]" name="quit" is-config="true" duration-ms="1804" started-at="2020-06-18T08:49:28Z" finished-at="2020-06-18T08:49:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-        <test-method status="PASS" signature="initMethod()[pri:0, instance:com.project.SuiteA.LoginTest@17c1bced]" name="initMethod" is-config="true" duration-ms="1" started-at="2020-06-17T08:54:24Z" finished-at="2020-06-17T08:54:24Z">
+        <test-method status="PASS" signature="initMethod()[pri:0, instance:com.project.SuiteA.LoginTest@17c1bced]" name="initMethod" is-config="true" duration-ms="1" started-at="2020-06-18T08:49:29Z" finished-at="2020-06-18T08:49:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initMethod -->
-        <test-method status="SKIP" signature="loginTest(java.util.Hashtable)[pri:0, instance:com.project.SuiteA.LoginTest@17c1bced]" name="loginTest" duration-ms="10" started-at="2020-06-17T08:54:24Z" data-provider="getData" finished-at="2020-06-17T08:54:24Z">
+        <test-method status="SKIP" signature="loginTest(java.util.Hashtable)[pri:0, instance:com.project.SuiteA.LoginTest@17c1bced]" name="loginTest" duration-ms="14" started-at="2020-06-18T08:49:29Z" data-provider="getData" finished-at="2020-06-18T08:49:30Z">
           <params>
             <param index="0">
               <value>
@@ -80,7 +80,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.project.SuiteA.LoginTest@17c1bced]" name="quit" is-config="true" duration-ms="258" started-at="2020-06-17T08:54:24Z" finished-at="2020-06-17T08:54:24Z">
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.project.SuiteA.LoginTest@17c1bced]" name="quit" is-config="true" duration-ms="200" started-at="2020-06-18T08:49:30Z" finished-at="2020-06-18T08:49:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->

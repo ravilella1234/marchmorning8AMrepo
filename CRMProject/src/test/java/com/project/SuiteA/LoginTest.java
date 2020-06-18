@@ -28,9 +28,6 @@ public class LoginTest extends BaseTest
 		  throw new SkipException("Runmode is set to NO...");
 	  }
 		  
-	  
-	  	
-	  
 	  //ds = new DriverScript();
 	  ds.executeKeywords(xls, testName, data);
   }
